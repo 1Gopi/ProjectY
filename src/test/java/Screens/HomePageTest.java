@@ -17,17 +17,20 @@ public class HomePageTest extends BaseClass {
 	//	driver = driver;
 	//}
 	//landing page object reference creation
-	LandingPageObjects landingpageobj = new LandingPageObjects(driver);
+    
 	
-	@Test(priority=1)
+	
+	@Test(priority=0)
 	public void Homepageop() {
+		System.out.println("Driver in homepage: "+driver);
 		Actions ac = new Actions(driver);
+		LandingPageObjects landingpageobj = new LandingPageObjects();
 		WebElement wom = landingpageobj.hoverWomen();
 		WebElement top = landingpageobj.hoverTops();
 		WebElement jackets = landingpageobj.clickJackets();
 		
-		FluentWait<WebDriver> fw = new FluentWait<>(driver).withTimeout(Duration.ofMillis(5000)).pollingEvery(Duration.ofMillis(10));	
-		fw.until(ExpectedConditions.elementToBeClickable(wom));
+		FluentWait<WebDriver> fw = new FluentWait<>(driver).withTimeout(Duration.ofMillis(10000)).pollingEvery(Duration.ofMillis(10)).ignoring(Throwable.class);	
+		//fw.until(ExpectedConditions.visibilityOf(wom));
 		ac.moveToElement(wom).build().perform();
 		fw.until(ExpectedConditions.visibilityOf(top));
 		ac.moveToElement(top).build().perform();

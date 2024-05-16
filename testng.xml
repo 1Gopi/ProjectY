@@ -5,6 +5,7 @@
     <classes>
       <class name="Screens.BaseClass"/>
       <class name="Screens.HomePageTest"/>
+      <class name="Screens.ProductsTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

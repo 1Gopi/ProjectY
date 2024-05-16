@@ -10,6 +10,13 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- Screens.HomePageTest -->
+      <class name="Screens.ProductsTest">
+        <methods>
+          <include name="product"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Screens.ProductsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,15 +1,27 @@
 package Screens;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import WebDriverListeners.Listener;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,13 +32,28 @@ public class BaseClass {
 	//String Url = ../src/test/java/Resources/config.properties;
 	public static WebDriver driver;
 	
+	Properties prop = new Properties();
+	File file = new File("..\\src\\test\\java\\Resources\\config.properties");
+
+	
+	
+	
+	
+	ExtentReports extent = new ExtentReports();
+	File file1 = new File(System.getProperty("user.dir")+"\\src\\test\\java\\Resources\\ereport.html");
+	ExtentSparkReporter spark = new ExtentSparkReporter(file1);
+	ExtentTest exnt = extent.createTest("BaseClass");
 	public void screenShots(WebDriver driver) {
-		//TakesScreenshot ts = (driver)TakesScreenshot;
-		// scc = ts.getScreenShotAs(OUTPUT.File);
-		//FileUtils.
+		File ts = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyDirectory(ts, new File("..\\src\\test\\java\\Resources"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	@BeforeClass(alwaysRun = true)
+	@BeforeSuite(alwaysRun = true)
 	public void setUp() {
 		System.out.println("In setup");
 		//WebDriverManager.chromedriver().setup();
@@ -52,7 +79,7 @@ public class BaseClass {
 		
 	}
 	
-	@AfterClass(alwaysRun = true)
+	@AfterSuite(alwaysRun = true)
 	public void tearDown() {
 		if(driver!=null) {
 			driver.quit();

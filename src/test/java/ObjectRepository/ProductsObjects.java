@@ -32,7 +32,7 @@ public class ProductsObjects {
 	@FindBy(xpath = "//div[@data-bind='html: $parent.prepareMessageForHtml(message.text)']")
 	private WebElement addTocartSuccessMessage;
 	
-	@FindBy(xpath = "//span[@class='counter-number']")
+	@FindBy(xpath = "//a[@class='action showcart']")
 	private WebElement minicart;
 	
 	@FindBy(xpath = "//a[@data-bind='attr: {href: product_url}, html: product_name']")

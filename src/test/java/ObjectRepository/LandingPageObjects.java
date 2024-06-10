@@ -17,6 +17,7 @@ public class LandingPageObjects extends BaseClass{
 		System.out.println("Driver in obj page:"+driver);
 		PageFactory.initElements(BaseClass.driver, this);
 		
+		
 	}
 	
 	@FindBy(xpath = "//a[@id='ui-id-3']//span[1]")

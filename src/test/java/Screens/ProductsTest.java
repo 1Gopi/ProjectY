@@ -18,7 +18,7 @@ import ObjectRepository.ProductsObjects;
 
 public class ProductsTest extends BaseClass {
   @Test(priority = 1)
-  public void product() {
+  public void product() throws Exception {
 	  Actions ac = new Actions(driver);
 	  ProductsObjects prod = new ProductsObjects();
 	  
@@ -36,13 +36,18 @@ public class ProductsTest extends BaseClass {
 	prod.clickCartAdd();
 	
 	SoftAssert sa = new SoftAssert();
+	Thread.sleep(4000);
 	sa.assertEquals(prod.cartSuccessmessage(),prod.validateCartAddSuccess().getText());
-	
+	Thread.sleep(5000);
 	prod.clickkMiniCart();
 	
 	sa.assertEquals(prod.minicartItem().getText(),prodDescription);
 	
+	Thread.sleep(5000);
+	
 	prod.clickViewAndEditCart();
+	
+	sa.assertAll();
 	
 	File fs = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	try {

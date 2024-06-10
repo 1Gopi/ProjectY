@@ -2,40 +2,40 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-09T20:57:11 IST" name="Suite" finished-at="2024-06-09T20:58:04 IST" duration-ms="52467">
+  <suite started-at="2024-06-10T10:52:20 IST" name="Suite" finished-at="2024-06-10T10:53:28 IST" duration-ms="68096">
     <groups>
     </groups>
-    <test started-at="2024-06-09T20:57:11 IST" name="Test" finished-at="2024-06-09T20:58:04 IST" duration-ms="52467">
+    <test started-at="2024-06-10T10:52:20 IST" name="Test" finished-at="2024-06-10T10:53:28 IST" duration-ms="68096">
       <class name="Screens.ProductsTest">
-        <test-method signature="product()[pri:1, instance:Screens.ProductsTest@418c5a9c]" started-at="2024-06-09T20:57:14 IST" name="product" finished-at="2024-06-09T20:57:35 IST" duration-ms="21145" status="PASS">
+        <test-method signature="product()[pri:1, instance:Screens.ProductsTest@418c5a9c]" started-at="2024-06-10T10:52:22 IST" name="product" finished-at="2024-06-10T10:52:59 IST" duration-ms="36538" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- product -->
       </class> <!-- Screens.ProductsTest -->
       <class name="Screens.HomePageTest">
-        <test-method signature="Homepageop()[pri:0, instance:Screens.HomePageTest@5a5338df]" started-at="2024-06-09T20:57:11 IST" name="Homepageop" finished-at="2024-06-09T20:57:14 IST" duration-ms="2596" status="PASS">
+        <test-method signature="Homepageop()[pri:0, instance:Screens.HomePageTest@5a5338df]" started-at="2024-06-10T10:52:20 IST" name="Homepageop" finished-at="2024-06-10T10:52:22 IST" duration-ms="2507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Homepageop -->
       </class> <!-- Screens.HomePageTest -->
       <class name="Screens.BaseClass">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Screens.BaseClass@5b7a8434]" started-at="2024-06-09T20:57:04 IST" name="setUp" finished-at="2024-06-09T20:57:11 IST" duration-ms="7501" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Screens.BaseClass@5b7a8434]" started-at="2024-06-10T10:52:10 IST" name="setUp" finished-at="2024-06-10T10:52:20 IST" duration-ms="9336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Screens.BaseClass@5b7a8434]" started-at="2024-06-09T20:58:04 IST" name="tearDown" finished-at="2024-06-09T20:58:04 IST" duration-ms="391" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Screens.BaseClass@5b7a8434]" started-at="2024-06-10T10:53:28 IST" name="tearDown" finished-at="2024-06-10T10:53:28 IST" duration-ms="422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Screens.BaseClass -->
       <class name="Screens.ShippingAddTest">
-        <test-method signature="Shipadd()[pri:5, instance:Screens.ShippingAddTest@5082d622]" started-at="2024-06-09T20:57:44 IST" name="Shipadd" finished-at="2024-06-09T20:58:04 IST" duration-ms="19367" status="PASS">
+        <test-method signature="Shipadd()[pri:5, instance:Screens.ShippingAddTest@5082d622]" started-at="2024-06-10T10:53:08 IST" name="Shipadd" finished-at="2024-06-10T10:53:28 IST" duration-ms="19977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Shipadd -->
       </class> <!-- Screens.ShippingAddTest -->
       <class name="Screens.CheckoutTest">
-        <test-method signature="checkout()[pri:4, instance:Screens.CheckoutTest@18e36d14]" started-at="2024-06-09T20:57:35 IST" name="checkout" finished-at="2024-06-09T20:57:44 IST" duration-ms="9170" status="PASS">
+        <test-method signature="checkout()[pri:4, instance:Screens.CheckoutTest@18e36d14]" started-at="2024-06-10T10:52:59 IST" name="checkout" finished-at="2024-06-10T10:53:08 IST" duration-ms="8842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkout -->
